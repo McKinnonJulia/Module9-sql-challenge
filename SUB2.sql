@@ -57,5 +57,6 @@ ADD CONSTRAINT fk_dept_emp_no
   
 Alter table dept_manager
  ADD CONSTRAINT fk_emp_m
-   FOREIGN KEY(emp_no)
+   FOREIGN KEY(emp_no,dept_emp)
+   PRIMARY KEY(emp_no,dept_no)
     REFERENCES employees(emp_no);
